@@ -3,7 +3,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between w-full items-center">
+    <div className="flex justify-between w-full items-center ">
       <div className="flex gap-10 font-zilla font-bold items-center w-1/3">
         <h1 className="text-white  text-3xl">HOME</h1>
         <h1 className="text-white  text-3xl">MAP</h1>
