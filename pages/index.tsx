@@ -12,12 +12,12 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="py-8 flex justify-start px-10 items-center bg-background bg-opacity-50 backdrop-blur-md w-11/12 rounded-tl-[45px] ">
+      <div className="py-8 flex justify-between px-10 items-center bg-background bg-opacity-50 backdrop-blur-md w-11/12 rounded-tl-[45px] ">
         <Navbar/>
       </div>
 
       <div className="mt-10 py-8 flex justify-center items-center bg-background bg-opacity-80 text-black backdrop-blur-md w-11/12 rounded-br-[45px] ">
-        <div className="flex justify-center items-center py-24 px-10"> 
+        <div className="flex justify-center items-center py-16 px-4 w-full"> 
         <Hero/>
         </div>
       </div>

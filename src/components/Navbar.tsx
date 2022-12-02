@@ -4,8 +4,10 @@ import logo from "../../public/sharpoetryLogo.svg";
 import BarberPole from "./BarberPole";
 import NavbarItems from "./NavbarItems";
 
+
 const Navbar = () => {
   return (
+
     <section className="w-full flex justify-center items-center relative mx-auto ">
       <nav className="md:gap-0 gap-10 relative w-full flex  items-center justify-center px-2 ">
         <div className="md:absolute  md:left-0">
@@ -30,6 +32,7 @@ const Navbar = () => {
         </div>
       </nav>
     </section>
+
   );
 };
 

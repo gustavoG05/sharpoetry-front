@@ -5,6 +5,7 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
     './app/**/*.{js,ts,jsx,tsx}',
     './src/components/**/*.{js,ts,jsx,tsx}',
+    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
   ],
   mode: "jit",
   theme: {
@@ -35,5 +36,7 @@ module.exports = {
       xl: "1700px",
     },
   },
-  plugins: [  ],
+  plugins: [
+    require('flowbite/plugin')
+]
 }
