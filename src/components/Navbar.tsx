@@ -1,70 +1,35 @@
 import React from "react";
 import Image from "next/image";
 import logo from "../../public/sharpoetryLogo.svg";
+import BarberPole from "./BarberPole";
+import NavbarItems from "./NavbarItems";
 
 const Navbar = () => {
   return (
-    <div className="w-full ">
-      <div className="flex flex-wrap place-items-center ">
-        <section className="relative mx-auto w-full">
-          <nav className="relative flex flex-wrap items-center justify-between px-2 ">
-            <div className="container px-1 mx-auto flex flex-wrap items-center justify-between">
-              {/** MOBILE HAMBURGER */}
-              <button className="absolute">
-                <div className="md:hidden space-y-2">
-                  <span className="block w-8 h-1 bg-gray-600"></span>
-                  <span className="block w-8 h-1 bg-gray-600"></span>
-                  <span className="block w-8 h-1 bg-gray-600"></span>
-                </div>
-              </button>
-              {/** MOBILE HAMBURGER */}
-              
-              <div className="hidden w-full md:block md:w-auto">
-                <ul className="flex gap-5  md:flex-row  list-none ml-auto">
-                  <li>
-                    <a
-                      className="hover:border-secondary border-solid border-2 rounded px-2 text-2xl font-zilla font-medium flex items-center uppercase  text-white "
-                      href="#hero"
-                    >
-                      Discover
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="hover:border-primary border-solid border-2 rounded px-2 text-2xl font-zilla font-medium flex items-center uppercase  text-white "
-                      href="#about"
-                    >
-                      Profile
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="hover:border-secondary border-solid border-2 rounded px-2 text-2xl font-zilla font-medium flex items-center uppercase  text-white "
-                      href="#services"
-                    >
-                      Setting
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="hover:border-primary border-solid border-2 rounded px-2 text-2xl font-zilla font-medium flex items-center uppercase  text-white "
-                      href="#map"
-                    >
-                      Map
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className="flex flex-wrap">
-                <a className="" href="">
-                  <Image src={logo} alt="logo" className="w-24 h-20"></Image>
-                </a>
-              </div>
-            </div>
-          </nav>
-        </section>
-      </div>
-    </div>
+    <section className="w-full flex justify-center items-center relative mx-auto ">
+      <nav className="md:gap-0 gap-10 relative w-full flex  items-center justify-center px-2 ">
+        <div className="md:absolute  md:left-0">
+          <BarberPole />
+        </div>
+
+        {/** MOBILE HAMBURGER */}
+        <button className="">
+          <div className="md:hidden  space-y-2">
+            <span className="block w-8 h-1 bg-primary"></span>
+            <span className="block w-8 h-1 bg-secondary"></span>
+            <span className="block w-5 h-1 bg-primary"></span>
+          </div>
+        </button>
+        {/** MOBILE HAMBURGER */}
+
+        <div className="absolute hidden md:block right-0">
+          <BarberPole />
+        </div>
+        <div className="hidden md:block">
+          <NavbarItems />
+        </div>
+      </nav>
+    </section>
   );
 };
 

@@ -18,3 +18,116 @@ background: -webkit-linear-gradient(45deg, hsla(0, 0%, 0%, 1) 0%, hsla(315, 77%,
 
 filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#000000", endColorstr="#170312", GradientType=1 );
 }
+
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+    
+}
+
+:root {
+	--color-background: #fcf8f3;
+	--color-primary: #aa1d4e;
+    --color-secondary: #1a5a95;
+	--color-border: #4d3e3e;
+	--color-white: #f9f9f9;
+}
+
+
+
+.barber-pole {
+	width: 40px;
+	height: 100px;
+	border: 6px solid var(--color-border);
+	background: linear-gradient(
+		-45deg,
+        hsla(339, 71%, 39%, 1) 0%,
+        hsla(339, 71%, 39%, 1) 5%,
+        hsla(0, 0%, 100%, 1) 5%,
+        hsla(0, 0%, 100%, 1) 15%,
+        hsla(209, 70%, 34%, 1) 15%,
+        hsla(209, 70%, 34%, 1) 30%,
+        hsla(0, 0%, 100%, 1) 30%,
+        hsla(0, 0%, 100%, 1) 40%,
+        hsla(339, 71%, 39%, 1) 40%,
+        hsla(339, 71%, 39%, 1) 55%,
+        hsla(0, 0%, 100%, 1) 55%,
+        hsla(0, 0%, 100%, 1) 65%,
+        hsla(209, 70%, 34%, 1) 65%,
+        hsla(209, 70%, 34%, 1) 80%,
+        hsla(0, 0%, 100%, 1) 80%,
+        hsla(0, 0%, 100%, 1) 90%,
+        hsla(339, 71%, 39%, 1) 90%,
+        hsla(339, 71%, 39%, 1) 100%
+	);
+	background-size: 40px 40px;
+	animation: scrolling-gradient 1s linear infinite;
+}
+
+@keyframes scrolling-gradient {
+	0% {
+		background-position: 0;
+	}
+
+	100% {
+		background-position: 40px;
+	}
+}
+
+
+.barber-pole-top {
+    position: absolute;
+    width: 54px;
+    height: 20px;
+    border-radius: 99px;
+    background-color: var(--color-white);
+    border: 6px solid var(--color-border);
+    top: -20px;
+    left: -13px;
+
+}
+
+.barber-pole-top::before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px;
+    z-index: -1;
+    border-radius: 16px;
+    background-color: var(--color-white);
+    border: 6px solid var(--color-border);
+     left: 50%;
+    transform: translateX(-50%);
+    top: -24px;
+}
+
+.barber-pole-bottom {
+    position: absolute;
+    width: 54px;
+    height: 20px;
+    border-radius: 99px;
+    background-color: var(--color-white);
+    border: 6px solid var(--color-border);
+    bottom: -20px;
+	left: -13px;
+
+
+    
+}
+
+.barber-pole-bottom::before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px;
+    z-index: -1;
+    border-radius: 16px;
+    background-color: var(--color-white);
+    border: 6px solid var(--color-border);
+     left: 50%;
+    transform: translateX(-50%);
+    bottom: -24px;
+    
+}
